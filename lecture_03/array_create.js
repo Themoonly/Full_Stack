@@ -12,3 +12,4 @@ console.log(fruit.length);
 console.log(fruit[fruit.length - 1]);
 // เข้าถึง index ที่ไม่มีอยู่
 console.log(fruit[3])
+
