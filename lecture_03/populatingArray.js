@@ -1,0 +1,15 @@
+let arr1 = ['A', true, 2];
+
+console.log("\n*********Length and index part 1*********\n");
+console.log(arr1.length);           //3
+console.log(arr1[3]);               //undefined
+console.log(arr1[2]);               //2
+console.log(arr1[arr1.length - 1]); //2
+
+console.log("\n*********Length and index part 2*********\n");
+let arr3 = Array(3);
+arr3[2] = "Adding a value : ";
+console.log(arr3[2]);               //Adding a value : 
+console.log(arr3[arr3.length - 1]); //Adding a value : 
+console.log(arr3[0]);               //undefined
+console.log(arr3[1]);               //undefined
