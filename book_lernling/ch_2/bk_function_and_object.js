@@ -183,3 +183,23 @@ const alice = new person("Alice");
 console.log(alice.hasOwnProperty("name")); // true
 console.log(alice.hasOwnProperty("greet")); // false
 console.log(alice.hasOwnProperty(alice)); // person {greet: [function] }
+
+// -----------------------------------------------------------------------------------------------
+// ตัวอย่างของ__proto__และprototype:
+// ในตัวอย่างนี ้ออบเจกต์ student สืบทอดจากออบเจกต์ person โดยตั้งค่า student.__proto__เป็นperson
+// ผลลัพธ์คือ student สามารถเข้าถึงคุณสมบัติ name และเมธอด greet จาก person ได้
+const person = {
+    name: "John",
+    greet: function(){
+        console.log("Hello, " + this.name);
+    }
+};
+
+const student = {
+    course: "Math"
+};
+
+student.__proto__ = person;
+
+console.log(student.name);
+student.greet();
